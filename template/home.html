@@ -1,0 +1,486 @@
+<div ng-include="'template/nav.html'"></div>
+<meta charset="utf-8">
+<style type="text/css">
+    /*栅格系统自定义*/
+    .col-md-1{
+        width: 5.5%;
+    }
+    .col-md-2{
+        width: 11%;
+    }
+    /*引用字体图标*/
+    .icon {
+        width: 1em; height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    a, a:hover{
+        text-decoration: none;
+    }
+    /*江良俊*/
+    #jiangliangjun{
+        width:calc(100% - 38px);
+        width:-webkit-calc(100% - 38px);
+        width:-moz-calc(100% - 38px);
+        background-color: #ffffff;
+    }
+    /*导航栏背景颜色*/
+    #jiangliangjun #header #nav_top{
+        background-color: #F8F8F8;
+    }
+    /*row里面的上下间距*/
+    #jiangliangjun #header #nav_top .container .row{
+        padding: 5px 0;
+    }
+    /*nav中div的右边线*/
+    #jiangliangjun #header #nav_top .container .row div{
+        border-right:1px solid #ccc;
+    }
+    /*导航字体颜色*/
+    #jiangliangjun #header #nav_top .container .row div a{
+        color: #666666;
+    }
+    /*div消除最后一个div的右边线*/
+    #jiangliangjun #header #nav_top .container .row div:last-child{
+        border-right:none;
+    }
+    /*美丽说首页的右边距*/
+    #jiangliangjun #header #nav_top .container .row .col-md-3 .col_home{
+        padding-right: 90px;
+    }
+    /*美丽说Logo*/
+    #jiangliangjun #header #nav_content .container .row .logo img{
+        width: 204px;
+        height: 52px;
+        margin-top: 40px;
+    }
+    /*搜索栏*/
+    #jiangliangjun #nav_content .container .row .search{
+        padding-top: 40px;
+    }
+    /*搜索栏的宝贝*/
+    #jiangliangjun #nav_content .container .row .search .search_tab{
+        width: 56px;
+        height: 24px;
+        background-color: #ff3366;
+        color: #ffffff;
+        margin-left: 24px;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_tab span{
+        line-height: 24px;
+        text-align: center;
+    }
+    /*搜素栏的搜素框*/
+    #jiangliangjun #nav_content .container .row .search .search_wiki .wiki-text{
+        width: 437px;
+        height: 28px;
+        border: 2px solid #ff3366;
+        display: inline-block;
+        vertical-align:middle;
+        outline: medium;
+    }
+    /*搜素栏的按钮*/
+    #jiangliangjun #nav_content .container .row .search .search_wiki .wiki-btn{
+        display: inline-block;
+        width: 70px;
+        height: 28px;
+        background: #ff3366;
+        vertical-align:middle;
+
+    }
+    #jiangliangjun #nav_content .container .row .search .search_wiki .wiki-btn img{
+        padding-top: 5px;
+    }
+    /*火爆商品*/
+    #jiangliangjun #nav_content .container .row .search .search_hot{
+        padding-top: 10px;
+        font-size:12px;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a{
+        padding-right: 5px;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a:hover{
+        color:#428bca;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(1){
+        color:#ff3366;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(3){
+        color:#ff3366;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(5){
+        color:#ff3366;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(7){
+        color:#ff3366;
+    }
+    #jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(9){
+        color:#ff3366;
+    }
+    /*导航底部*/
+    #jiangliangjun #nav_bottom{
+        background-color: black;
+        border-bottom:1px solid #cccccc;
+        margin-bottom: 10px;
+    }
+    /*内容*/
+    #jiangliangjun #body{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /*内容顶部的字体*/
+    #jiangliangjun #body .body_text{
+        margin-top: 40px;
+    }
+    #jiangliangjun #body .body_text h3{
+        margin: 0 auto;
+        text-align: center;
+        width: 160px;
+        padding-bottom: 5px;
+    }
+    #jiangliangjun #body  .body_text p{
+        margin: 0 auto;
+        background-color: #ff3366;
+        width: 80px;
+        height: 3px;
+    }
+
+</style>
+
+<!--江良俊-->
+<!--<h1>首页</h1>-->
+<div id="jiangliangjun" ng-controller="homeCtrl">
+    <div id="header">
+        <div id="nav_top" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-home"></use>
+                        </svg>
+                            <a href="#/home" class="col_home">美丽说首页</a>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-wechat"></use>
+                        </svg>
+                            <a href="#">微信登录</a>
+                        </div>
+                    <div class="col-md-2">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-qq"></use>
+                        </svg>
+                        <a href="#">QQ登录</a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="#/logIn">登录</a>
+                    </div>
+                    <div class="col-md-1">
+                        <a href="#/logIn">注册</a>
+                    </div>
+                    <div class="col-md-2">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-shoucang"></use>
+                        </svg>
+                        <a href="">我的收藏</a>
+                    </div>
+                    <div class="col-md-2">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-gouwuche1"></use>
+                        </svg>
+                        <a href="#/cart">我的购物车</a>
+                    </div>
+                    <div class="col-md-2">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-dingdan"></use>
+                        </svg>
+                        <a href="">我的订单</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.meilishuo.com/helpcenter/buyerService/">帮助中心</a>
+                        <span class="caret"></span>
+                    </div>
+                    <div class="col-md-0">
+                        <a href="http://xd.meilishuo.com?ptp=1.zfrD1b.0.0.zM28oXi">商家后台</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nav_content" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 logo">
+                        <img src="images/logo.png" alt="美丽说图标" title="美丽说">
+                    </div>
+                    <div class="col-md-6 search">
+                        <div class="search_tab">
+                            <span>宝贝</span>
+                        </div>
+                        <div class="search_wiki">
+                            <input type="text" class="wiki-text"><span class="wiki-btn">
+                                     <img src="images/wiki.png" alt="">
+                                 </span>
+                        </div>
+                        <div class="search_hot">
+                            <a href="#">秋季套装</a>
+                            <a href="#">连衣裙</a>
+                            <a href="#">破洞针织</a>
+                            <a href="#">薄卫衣</a>
+                            <a href="#">薄外套</a>
+                            <a href="#">秋季单鞋</a>
+                            <a href="#">牛仔外套</a>
+                            <a href="#">阔腿裤</a>
+                            <a href="#">小白鞋</a>
+                            <a href="#">包包新款</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="code">
+                            <img src="images/QR_code.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nav_bottom" class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row text-center">
+                    <!--空着-->
+                    <!--底部导航条-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/Carousel-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/Carousel-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/Carousel-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/Carousel-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/Carousel-1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/Carousel-1.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div class="body_text">
+            <h3>
+                全部商品
+            </h3>
+            <p></p>
+        </div>
+        <div class="category_container">
+            <div class="category_item" ng-repeat="item in data track by $index">
+                <div class="category_item-curtain">
+                    <a href="#/item">
+                        <svg class="icon" aria-hidden="true" ng-click="add(item)">
+                            <use xlink:href="#icon-gouwuche1"></use>
+                        </svg>
+                    </a>
+                </div>
+                <img src="{{item.imageSrc}}" alt="">
+                <div class="content-text">
+                    <p class="price">
+                        {{item.price | currency:'￥'}}
+                    </p>
+                    <p class="title">
+                        <img src="images/youxuan.png" alt="图片加载中">
+                        {{item.description}}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        /*设置自动播放的时间*/
+        autoplay: 2000,
+        speed:600,           //切换速度（单位：毫秒）
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
+    //    $(function () {
+    //
+    //        var timer = null;
+    //        window.onscroll = function(){
+    //            timer = setTimeout(function () {
+    //                if (checkScrollSlide()) {
+    //                    var dataArr = [
+    //                        {src: '01.jpg',price:'￥199',des:'2017新品波点腰带修身显瘦羽绒服'}
+    //                    ];
+    //                    for (var i = 0; i < dataArr.length; i++) {
+    //                        var box = document.createElement('div');
+    //                        document.getElementById('main').appendChild(box);
+    //                        box.className = 'box';
+    //
+    //                        var pic = document.createElement('div');
+    //                        box.appendChild(pic);
+    //                        pic.className = 'pic';
+    //
+    //                        var part = document.createElement('div');
+    //                        box.appendChild(part);
+    //                        part.className='part';
+    //
+    //                        var price = document.createElement('div');
+    //                        part.appendChild(price);
+    ////                        part.className = 'price';
+    ////                        price.text = dataArr[i].price;
+    //
+    //
+    //                        var img = document.createElement('img');
+    //                        pic.appendChild(img);
+    //                        img.src = 'images/' + dataArr[i].src;
+    //
+    //                    }
+    //                }
+    //            }, 200)
+    //        };
+    //        function getByClass(parent,clsName){
+    //            var boxArr = [];//用来储存获取所有为class为box的元素
+    //            var oElements = parent.getElementsByTagName('*');
+    //            for (var i = 0; i < oElements.length; i++) {
+    //                if(oElements[i].className == clsName){
+    //                    boxArr.push(oElements[i]);
+    //                }
+    //            }
+    //            return boxArr;
+    //        }
+    //
+    //        function checkScrollSlide(){
+    //            var oParent = document.getElementById('main');
+    //            var oBoxs =getByClass(oParent,'box');
+    //            //每个box的height都是376px
+    //            var lastBoxH = oBoxs[oBoxs.length-1].offsetTop + 178;//1430
+    //            var scrollTop = scroll().top;//0
+    //            var documentH = $(document).width();//1519
+    //            var isLoadingImg = lastBoxH <= (scrollTop + documentH);
+    //            return isLoadingImg;
+    //        }
+    //        /**
+    //         * 获取滚动距离
+    //         * 使用方法 scroll().top scroll().left
+    //         * @returns {*}
+    //         */
+    //        function scroll() {
+    //            if (window.pageXOffset || window.pageYOffset) {
+    //                var obj = {
+    //                    top: window.pageYOffset,
+    //                    left: window.pageXOffset
+    //                };
+    //                return obj;
+    //            }else if(document.compatMode == 'CSS1Compat'){
+    //                // 标准浏览器
+    //                return {
+    //                    top:document.documentElement.scrollTop,
+    //                    left:document.documentElement.scrollLeft
+    //                }
+    //            }else {
+    //                // 怪异模式
+    //                return {
+    //                    top:document.body.scrollTop,
+    //                    left:document.body.scrollLeft
+    //                }
+    //            }
+    //        }
+    //
+    //    });
+</script>
+
+
+<!--<script type="text/javascript">-->
+<!--/*瀑布流*/-->
+<!--//当一加载完毕-->
+<!--$(function () {-->
+<!--var timer = null;-->
+<!--//当一滚动-->
+<!--window.onscroll = function () {-->
+<!--clearTimeout(timer);-->
+<!--timer = setTimeout(function () {-->
+<!--if (LoadNewImages()) {-->
+<!--var dataArray = [-->
+<!--{src: 'girl_1.jpg'},-->
+<!--{src: 'girl_2.jpg'},-->
+<!--{src: 'girl_3.jpg'},-->
+<!--{src: 'girl_4.jpg'},-->
+<!--{src: 'girl_5.jpg'},-->
+<!--{src: 'girl_6.jpg'},-->
+<!--{src: 'girl_7.jpg'},-->
+<!--{src: 'girl_8.jpg'},-->
+<!--{src: 'girl_9.jpg'},-->
+<!--{src: 'girl_10.jpg'}-->
+<!--];-->
+<!--for (var i = 0; i < dataArray-->
+<!--.length; i++) {-->
+<!--var waterfall_Img = document.createElement('div');-->
+<!--var body_content = document.getElementsByClassName('body_content')[0];-->
+<!--body_content.appendChild(waterfall_Img);-->
+<!--// 1.创建waterfall_Img-->
+<!--waterfall_Img.className = 'waterfall_Img';-->
+
+<!--// 3.创建img-->
+<!--var img = document.createElement('img');-->
+<!--waterfall_Img.appendChild(img);-->
+<!--img.src = 'images/' + dataArray[i].src;-->
+<!--}-->
+<!--}-->
+<!--}, 400);-->
+<!--};-->
+<!--//当加载到最后一个盒子的一半的时候加载新的盒子-->
+<!--function LoadNewImages() {-->
+<!--//1.获取最后一个盒子-->
+<!--var body = document.getElementById('body');-->
+<!--//1.1获取每个div的class-->
+<!--var waterfall = body.getElementsByClassName('waterfall_Img');-->
+<!--//1.2获取最后一个盒子-->
+<!--var lastBox = waterfall[waterfall.length - 1];-->
+<!--//1.3求出最后一个盒子的高度-->
+<!--var lastBoxH = lastBox.offsetTop + lastBox.offsetHeight / 2;-->
+<!--//2.获取屏幕的高度-->
+<!--var scrollH = document.documentElement.clientHeight;-->
+<!--//2.1.距离屏幕的顶部的距离-->
+<!--var scrollTop = scroll().top;-->
+<!--//2.2.加载图片的高度-->
+<!--var Loading = lastBoxH <= (scrollH + scrollTop);-->
+<!--return Loading;-->
+<!--}-->
+<!--function scroll() {-->
+<!--if (window.pageXOffset || window.pageYOffset) {-->
+<!--var obj = {-->
+<!--top: window.pageYOffset,-->
+<!--left: window.pageXOffset-->
+<!--};-->
+<!--return obj;-->
+<!--}else if(document.compatMode == 'CSS1Compat'){-->
+<!--// 标准浏览器-->
+<!--return {-->
+<!--top:document.documentElement.scrollTop,-->
+<!--left:document.documentElement.scrollLeft-->
+<!--}-->
+<!--}else {-->
+<!--// 怪异模式-->
+<!--return {-->
+<!--top:document.body.scrollTop,-->
+<!--left:document.body.scrollLeft-->
+<!--}-->
+<!--}-->
+<!--}-->
+<!--});-->
+<!--</script>-->

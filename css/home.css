@@ -1,0 +1,178 @@
+/*栅格系统自定义*/
+#jiangliangjun .col-md-1 {
+    width: 5.5%;
+}
+
+#jiangliangjun .col-md-2 {
+    width: 11%;
+}
+
+#jiangliangjun a, a:hover {
+    text-decoration: none;
+}
+
+/*江良俊*/
+#jiangliangjun {
+    width: calc(100% - 38px);
+    width: -webkit-calc(100% - 38px);
+    width: -moz-calc(100% - 38px);
+    background-color: #ffffff;
+}
+
+/*导航栏背景颜色*/
+#jiangliangjun #header #nav_top {
+    background-color: #F8F8F8;
+}
+
+/*row里面的上下间距*/
+#jiangliangjun #header #nav_top .container .row {
+    padding: 5px 0;
+}
+
+/*nav中div的右边线*/
+#jiangliangjun #header #nav_top .container .row div {
+    border-right: 1px solid #ccc;
+}
+
+/*导航字体颜色*/
+#jiangliangjun #header #nav_top .container .row div a {
+    color: #666666;
+}
+#jiangliangjun #header #nav_top .container .row div a:hover{
+    color: #ff3366;
+}
+
+/*div消除最后一个div的右边线*/
+#jiangliangjun #header #nav_top .container .row div:last-child {
+    border-right: none;
+}
+
+/*美丽说首页的右边距*/
+#jiangliangjun #header #nav_top .container .row .col-md-3 .col_home {
+    padding-right: 90px;
+}
+
+/*美丽说Logo*/
+#jiangliangjun #header #nav_content .container .row .logo img {
+    width: 204px;
+    height: 52px;
+    margin-top: 40px;
+}
+
+/*搜索栏*/
+#jiangliangjun #nav_content .container .row .search {
+    padding-top: 40px;
+}
+
+/*搜索栏的宝贝*/
+#jiangliangjun #nav_content .container .row .search .search_tab {
+    width: 56px;
+    height: 24px;
+    background-color: #ff3366;
+    color: #ffffff;
+    margin-left: 24px;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_tab span {
+    line-height: 24px;
+    text-align: center;
+}
+
+/*搜素栏的搜素框*/
+#jiangliangjun #nav_content .container .row .search .search_wiki .wiki-text {
+    width: 437px;
+    height: 28px;
+    border: 2px solid #ff3366;
+    display: inline-block;
+    vertical-align: middle;
+    outline: medium;
+}
+
+/*搜素栏的按钮*/
+#jiangliangjun #nav_content .container .row .search .search_wiki .wiki-btn {
+    display: inline-block;
+    width: 70px;
+    height: 28px;
+    background: #ff3366;
+    vertical-align: middle;
+
+}
+
+#jiangliangjun #nav_content .container .row .search .search_wiki .wiki-btn img {
+    padding-top: 5px;
+}
+
+/*火爆商品*/
+#jiangliangjun #nav_content .container .row .search .search_hot {
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a {
+    padding-right: 5px;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a:hover {
+    color: #428bca;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(1) {
+    color: #ff3366;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(3) {
+    color: #ff3366;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(5) {
+    color: #ff3366;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(7) {
+    color: #ff3366;
+}
+
+#jiangliangjun #nav_content .container .row .search .search_hot a:nth-child(9) {
+    color: #ff3366;
+}
+
+/*导航底部*/
+#jiangliangjun #nav_bottom {
+    background-color: black;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 10px;
+}
+
+/*内容*/
+#jiangliangjun #body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*内容顶部的字体*/
+#jiangliangjun #body .body_text {
+    margin-top: 40px;
+}
+
+#jiangliangjun #body .body_text h3 {
+    margin: 0 auto;
+    text-align: center;
+    width: 160px;
+    padding-bottom: 5px;
+}
+
+#jiangliangjun #body .body_text p {
+    margin: 0 auto;
+    background-color: #ff3366;
+    width: 80px;
+    height: 3px;
+}
+
+#jiangliangjun #body .pages_container {
+    height: 100px;
+    padding-top: 50px;
+}
+
+#jiangliangjun #body button {
+    margin-right: 10px;
+}

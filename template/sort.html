@@ -3,57 +3,60 @@
 
 <!--李峰-->
 
-<style>
-    #lf .sec_nav{
-        position : fixed;
-        top : 0;
-        list-style : none;
-        display : flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 10px;
-        width: 100%;
-        border-bottom:1px solid #ccc;
-        z-index: 100;
-        background-color: #eee;
-    }
-    #lf .sec_nav ul li{
-        width : 110px;
-        display : flex;
-        justify-content: center;
-        align-items: center;
-        background: none;
-    }
-    #lf .sec_nav ul>li.active a{
-        color : #f36;
-        border-bottom : 2px solid #f36;
-    }
+<!--<style>-->
+    <!--#lf{-->
+        <!--padding-bottom: 50px;-->
+    <!--}-->
+    <!--#lf .sec_nav{-->
+        <!--position : fixed;-->
+        <!--top : 0;-->
+        <!--list-style : none;-->
+        <!--display : flex;-->
+        <!--justify-content: center;-->
+        <!--align-items: center;-->
+        <!--padding-top: 10px;-->
+        <!--width: 100%;-->
+        <!--border-bottom:1px solid #ccc;-->
+        <!--z-index: 100;-->
+        <!--background-color: #eee;-->
+    <!--}-->
+    <!--#lf .sec_nav ul li{-->
+        <!--width : 110px;-->
+        <!--display : flex;-->
+        <!--justify-content: center;-->
+        <!--align-items: center;-->
+        <!--background: none;-->
+    <!--}-->
+    <!--#lf .sec_nav ul>li.active a{-->
+        <!--color : #f36;-->
+        <!--border-bottom : 2px solid #f36;-->
+    <!--}-->
 
-    #lf .sec_nav ul>li>a:hover{
-        color : #f36;
-        border-bottom : 2px solid #f36;
-    }
-    #lf .sec_nav ul li a{
-        background: none;
-        border-radius: 0;
-        display: block;
-        height: 38px;
-        font-size: 16px;
-        font-weight: 700;
-        color: #333;
-    }
+    <!--#lf .sec_nav ul>li>a:hover{-->
+        <!--color : #f36;-->
+        <!--border-bottom : 2px solid #f36;-->
+    <!--}-->
+    <!--#lf .sec_nav ul li a{-->
+        <!--background: none;-->
+        <!--border-radius: 0;-->
+        <!--display: block;-->
+        <!--height: 38px;-->
+        <!--font-size: 16px;-->
+        <!--font-weight: 700;-->
+        <!--color: #333;-->
+    <!--}-->
 
-    #lf {
-        background: #eee;
-    }
-</style>
+    <!--#lf {-->
+        <!--background: #eee;-->
+    <!--}-->
+<!--</style>-->
 
 <div id="lf" ng-controller="sortCtrl">
     <!--导航条-->
     <div class="sec_nav">
         <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="">首页</a></li>
-            <li role="presentation"><a href="javascript:;" ng-click="change('上衣')">上衣</a></li>
+            <li role="presentation"><a href="#/home">首页</a></li>
+            <li role="presentation" class="active"><a href="javascript:;" ng-click="change('上衣')">上衣</a></li>
             <li role="presentation"><a href="javascript:;" ng-click="change('裙子')">裙子</a></li>
             <li role="presentation"><a href="javascript:;" ng-click="change('裤子')">裤子</a></li>
             <li role="presentation"><a href="javascript:;" ng-click="change('女鞋')">女鞋</a></li>
@@ -75,9 +78,11 @@
     <div class="category_container">
         <div class="category_item" ng-repeat="item in currentCategory">
             <div class="category_item-curtain">
-                <svg class="icon" aria-hidden="true" ng-click="add(item)">
-                    <use xlink:href="#icon-gouwuche1"></use>
-                </svg>
+                <a href="#/item">
+                    <svg class="icon" aria-hidden="true" ng-click="post(item)">
+                        <use xlink:href="#icon-gouwuche1"></use>
+                    </svg>
+                </a>
             </div>
             <img src="{{item.imageSrc}}" alt="">
             <div class="content-text">
@@ -94,4 +99,19 @@
     </div>
 
 </div>
+
+<!--页脚-->
+<div ng-include="'template/footer.html'"></div>
+
+<script>
+    $(function () {
+        var lis = $("#lf .sec_nav .nav>li");
+        for (var i = 0; i < lis.length; i++) {
+            $(lis[i]).click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        }
+    })
+
+</script>
 

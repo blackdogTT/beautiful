@@ -1,0 +1,45 @@
+#lf{
+    padding-bottom: 50px;
+}
+#lf .sec_nav{
+    position : fixed;
+    top : 0;
+    list-style : none;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    border-bottom:1px solid #ccc;
+    z-index: 100;
+    background-color: #eee;
+}
+#lf .sec_nav ul li{
+    width : 110px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+#lf .sec_nav ul>li.active a{
+    color : #f36;
+    border-bottom : 2px solid #f36;
+}
+
+#lf .sec_nav ul>li>a:hover{
+    color : #f36;
+    border-bottom : 2px solid #f36;
+}
+#lf .sec_nav ul li a{
+    background: none;
+    border-radius: 0;
+    display: block;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+#lf {
+    background: #eee;
+}

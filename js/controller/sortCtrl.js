@@ -1,5 +1,7 @@
 App.controller('sortCtrl',['$scope',function ($scope) {
-    $scope.currentCategory = $scope.data;
+    $scope.currentCategory = $scope.data.filter(function (t) {
+        return t.type === '上衣'
+    });
 
     $scope.change = function (type) {
         var typeArr = [];
@@ -11,20 +13,7 @@ App.controller('sortCtrl',['$scope',function ($scope) {
         $scope.currentCategory = typeArr;
     };
 
-    $scope.add = function (item) {
-        if ($scope.dispose.cartArr.every(function (t) {
-                return t['id'] !== item['id'];
-            })){
-            $scope.dispose.cartArr.push(item);
-        }
-
-        if (
-            $scope.dispose.categoryArr.every(function (t) {
-                return t !== item.type;
-            })
-        ){
-            $scope.dispose.categoryArr.push(item.type);
-        }
-
-    };
+    $scope.post = function (item) {
+        $scope.dispose.currentShow = item;
+    }
 }]);

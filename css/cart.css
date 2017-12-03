@@ -1,0 +1,172 @@
+#yjj {
+    background-color: #f4f4f4;
+    width: 100%;
+    min-height: 100%;
+}
+
+#yjj .logo {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+#yjj .logo div {
+    height: 66px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#yjj .logo div img {
+    width: 144px;
+    background-repeat: no-repeat;
+    margin-top: 14px;
+}
+
+#yjj .cart-emptyCart {
+    height: 226px;
+    width: 1200px;
+    margin: 30px auto 0 auto;
+    background-color: #fff;
+    text-align: center;
+}
+
+#yjj .cart-emptyCart h4 {
+    padding-top: 30px;
+}
+
+#yjj .cart-emptyCart h4 svg {
+    font-size: 50px;
+}
+
+#yjj .cart-emptyCart .btn {
+    margin: 20px auto;
+    background-color: #ff3366;
+    border-color: #ff3366;
+}
+
+#yjj .cart-fullCart{
+    width: 1200px;
+    margin: 20px auto 0 auto;
+    background-color: #fff;
+}
+
+#yjj .cart-fullCart .cart-category .cart-item>div{
+    height: 111px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#yjj .cart-header{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+
+#yjj .cart-header>div{
+    height: 49px;
+    text-align: center;
+    line-height: 49px;
+    padding: 0;
+}
+
+#yjj .cart-type{
+    height: 60px;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+}
+
+#yjj .cart-type .col-md-1{
+    height: 60px;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+}
+
+#yjj .cart-item{
+    height: 111px;
+    line-height: 111px;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+#yjj .cart-item>div{
+    padding: 0;
+}
+#yjj .cart-item .col-md-2 img{
+    width: 80px;
+    height: 90px;
+}
+/*数量增减按钮*/
+#yjj .cart-item .col-md-2.count_btn{
+    margin: 0;
+}
+#yjj .cart-item .col-md-2.count_btn .cart-operate{
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    line-height: 27px;
+    border: 1px solid #dddddd;
+    color: #333333;
+    vertical-align: middle;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+#yjj .cart-item .col-md-2.count_btn input{
+    display: inline-block;
+    height: 27px;
+    line-height:27px;
+    width: 45px;
+    text-align: center;
+    outline: medium;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    border-left: none;
+    border-right: none;
+}
+#yjj .closeAnAccount{
+    height: 50px;
+    margin-top:20px;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 1200px;
+    opacity: 1;
+    z-index: 999;
+    background-color: #fff;
+}
+#yjj .closeAnAccount>div{
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    text-align: center;
+}
+#yjj .closeAnAccount .description{
+    text-align: right;
+    color: #333;
+}
+#yjj .closeAnAccount .description .price {
+    color: #f13e3a;
+    font-size:26px;
+    font-weight:700;
+    padding: 0 10px;
+}
+#yjj .closeAnAccount .description .amount{
+    color: #f13e3a;
+}
+#yjj .closeAnAccount .btn{
+    background-color: #f13e3a;
+    font-size: 30px;
+    color: #ffffff;
+}
+#yjj .cart-footer{
+    color: #999999;
+    width: 100%;
+    height: 145px;
+    padding: 40px 0;
+    text-align: center;
+
+}

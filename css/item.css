@@ -1,0 +1,143 @@
+#lf2{
+    height:100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+#lf2 .header{
+    width : auto;
+    height: auto;
+    background-color: #fff;
+    font-size: 30px;
+    color : black;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+    border-bottom: 1px solid #ccc;
+}
+#lf2 .header:hover{
+    color : #f36;
+    opacity: 0.5;
+}
+
+#lf2 .container .row{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#lf2 .container .row .col-md-4 .demo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 600px;
+    margin-left:0;
+}
+#lf2 .container .row .col-md-4 .demo img{
+    width: 400px;
+    height: 600px;
+    margin-left:-100px;
+}
+
+#lf2 .container .row .col-md-6{
+    margin-left:-100px;
+}
+#lf2 .container .row .col-md-6 h3{
+    font-size: 50px;
+}
+#lf2 .container .row .col-md-6 h3:hover{
+    color : #f36;
+    opacity:0.7;
+}
+#lf2 .container .row .col-md-6 .price{
+    font-size: 30px;
+    background-color: #f3f3f3;
+    margin:20px 0;
+}
+
+#lf2 .container .row .col-md-6 .price span{
+    font-size: 50px;
+    color : #f36;
+}
+
+
+#lf2 .container .row .col-md-6 .lx{
+    margin-top:20px;
+}
+#lf2 .container .row .col-md-6 .lx img{
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+}
+#lf2 .container .row .col-md-6 .lx{
+    margin-top:20px;
+}
+#lf2 .container .row .col-md-6 .lx img:hover{
+    transform : scale(1.5);
+}
+#lf2 .container .row .col-md-6 .buy{
+    margin-top:20px;
+}
+#lf2 .container .row .col-md-6 .buy button{
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    border : none;
+}
+#lf2 .container .row .col-md-6 .buy button:nth-child(1){
+    background-color: red;
+    color : #fff;
+}
+#lf2 .container .row .col-md-6 .service{
+    margin:20px 0;
+}
+#lf2 .container .row .col-md-6 .service img{
+    width: 24px;
+    height: 24px;
+    margin-left:5px;
+}
+#lf2 .container .row .col-md-6 .service img:hover{
+    transform : scale(1.5);
+}
+#lf2 .container .row .col-md-6 .payType{
+    margin:20px 0;
+    line-height:24px;
+}
+#lf2 .container .row .col-md-6 .payType .icon{
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    margin-left:15px;
+}
+#lf2 .container .row .col-md-6 .payType .icon:hover{
+    transform : scale(1.5);
+}
+
+#lf2 .container .row .col-md-2{
+    background-color: #fff;
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+    margin-top:20px;
+}
+#lf2 .container .row .col-md-2 >p{
+    font-size: 25px;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}
+#lf2 .container .row .col-md-2 p:hover{
+    color:#f63;
+}
+#lf2 .container .row .col-md-2 ul>li{
+    list-style: none;
+    width: 100%;
+}
+#lf2 .container .row .col-md-2 ul>li img{
+    width: 180px;
+    height: auto;
+}
+#lf2 .container .row .col-md-2 ul>li p{
+    font-size: 15px;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}

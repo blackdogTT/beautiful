@@ -1,235 +1,151 @@
 <div ng-include="'template/nav.html'"></div>
 <!--石春雨-->
-<style>
-    *{
-        margin:0;
-        padding: 0;
-    }
-    #shichunyu{
-        width:calc(100% - 38px);
-        width:-webkit-calc(100% - 38px);
-        width:-moz-calc(100% - 38px);
-        background-color: #f5f5f5;
-    }
-    #shichunyu .header{
-        width: 100%;
-        background-color: #fff;
-        padding: 20px 0;
-    }
-    #shichunyu .header .container .row .col-md-3 img{
-        width: 200px;
-        height: 52px;
-    }
-    #shichunyu .header .container .row .col-md-9 span{
-        display: inline-block;
-        font-size: 12px;
-        width: 861px;
-        height: 28px;
-        background-color: #ffefef;
-        border:1px solid #ffc0cc;
-        top:12px;
-        text-align: center;
-        line-height: 28px;
-        margin-top: 12px;
-    }
-    #shichunyu .content{
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-    #shichunyu .content .container .row .content_vacuity{
-        width: 100%;
-    }
-    #shichunyu .content .container .row .content_vacuity img{
-        margin-left: -400px;
-    }
-    #shichunyu .content .container .row .tab{
-        width: 380px;
-        background: rgba(255,236,235,0.9);
-        position: absolute;
-        top: 20%;
-        right:10%;
-    }
-    #shichunyu .content .container .row .tab .login{
-        height: 60px;
-        border-bottom:1px solid #cccccc;
-    }
-    #shichunyu .content .container .row .tab .login a{
-        line-height: 42px;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 700;
-        text-decoration: none;
-    }
-    #shichunyu .content .container .row .tab .login .login_left{
-        float: left;
-        width: 50%;
-    }
-    #shichunyu .content .container .row .tab .login .login_right{
-        float: left;
-        width: 50%;
-    }
-    #shichunyu .content .container .row .tab .login .login_left .tab_left{
-        color: #fe617a;
-        height: 45px;
-        border-bottom: 2px solid #ff4066;
-    }
-    #shichunyu .content .container .row .tab .login .login_right .tab_right{
-        color: #fe617a;
-        height: 45px;
-        border-bottom: 2px solid #ff4066;
-    }
-    #shichunyu .content .container .row .tab .login .login_left .lod_left{
-        display: block;
-        width: 100px;
-        margin: 10px auto 0;
-    }
-    #shichunyu .content .container .row .tab .login .login_right .lod_right{
-        display: block;
-        width: 100px;
-        margin: 10px auto 0;
-    }
-    #shichunyu .content .container .row .tab .inputS{
-        width: 100%;
-        height: 120px;
-    }
-    #shichunyu .content .container .row .tab .inputS input{
-        width: 300px;
-        height: 40px;
-        background:none;
-        border: 1px solid #ccc;
-        margin-top: 15px;
-        font-size:12px;
-        padding: 0 5px;
-        outline: none;
-    }
-    #shichunyu .content .container .row .tab .buttons{
-        width: 100%;
-        height: 60px;
-    }
-    #shichunyu .content .container .row .tab .buttons input{
-        width: 300px;
-        height: 40px;
-        margin-top: 15px;
-        border: none;
-        background-color: #ff5777;
-        color: white;
-        font-size: 12px;
-        cursor: pointer;
-        text-align: center;
-        line-height: 40px;
-        outline: none;
-    }
-    /*引用字体图标*/
-    .icon {
-        width: 1em; height: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-    }
-    #shichunyu .content .container .row .tab .other_log{
-        margin-top: 20px;
-    }
-    #shichunyu .content .container .row .tab .other_log a{
-        text-decoration: none;
-        color: #333333;
-    }
-    #shichunyu .content .container .row .tab .other_log a:nth-child(1){
-        margin-left: -100px;
-        padding-right: 40px;
-    }
-    #shichunyu .content .container .row .tab .registered{
-        padding-top: 15px;
-        text-align: right;
-        padding-right: 25px;
-        padding-bottom: 30px;
-    }
-    #shichunyu .content .container .row .tab .registered a{
-        font-size:12px;
-        text-decoration: underline;
-    }
-    #shichunyu .content .container .row .tab .registered .forget_psd{
-        color: #959595;
-        padding-right: 15px;
-    }
-    #shichunyu .content .container .row .tab .registered .free_registration{
-        color:#fe5979;
-    }
-    #shichunyu .footer{
-        margin-top: 20px;
-        border-top:1px solid #dddddd;
-        padding-top: 20px;
-        color: #666666;
-        background-color: #f5f5f5;
-    }
-    #shichunyu .footer .container .row{
-        width: 1200px;
-        margin: 0 auto;
-        border-bottom: 1px solid #dddddd;
-    }
-    #shichunyu .footer .container .row .col-md-8 .footer_left{
-        float: left;
-    }
-    #shichunyu .footer .container .row .col-md-8 .footer_left ul{
-        float: left;
-        margin-right: 104px;
-        margin-bottom: 20px;
-        line-height: 26px;
-        list-style: none;
-    }
-    #shichunyu .footer .container .row .col-md-8 .footer_left ul li h4{
-        font-size: 16px;
-        line-height: 28px;
-        color: #666666;
-        font-weight: bold;
-    }
-    #shichunyu .footer .container .row .col-md-8 .footer_left ul>li+li{
-        font-size: 12px;
-        color: #666;
-        cursor: pointer;
-        margin-top: 12px;
-    }
-    #shichunyu .footer .container .row .col-md-8 .footer_left ul>li+li:hover{
-        color: #ff5577;
-    }
-    #shichunyu .footer .container .row .col-md-4 .footer_right{
-        float: left;
-    }
-    #shichunyu .footer .container .row .col-md-4 .footer_right h4{
-        font-size:16px;
-        color: #666666;
-        font-weight: bold;
-        padding-bottom: 10px;
-    }
-    #shichunyu .footer .container .row .col-md-4 .footer_right .wechat_code{
-        text-align: center;
-        margin-right: 60px;
-        float: left;
-    }
-    #shichunyu .footer .container .row .col-md-4 .footer_right .meilishuoApp{
-        float: left;
-    }
-    #shichunyu .footer .footer_bottom{
-        padding-top: 15px;
-    }
-    #shichunyu .footer .footer_bottom .container .row .col-md-12{
-        font-size: 12px;
-    }
-    #shichunyu .footer .footer_bottom .container .row .col-md-12>p{
-        margin-bottom: 5px;
-    }
-    #shichunyu .footer .footer_bottom .container .row .col-md-12>p+p{
-        margin-bottom: 15px;
-    }
-    #shichunyu .footer .footer_bottom .container .row .col-md-12 p a{
-        color: #777777;
-        font-size: 12px;
-    }
-    #shichunyu .footer .footer_bottom .container .row .col-md-12 p a:hover{
-        color: #ff5577;
-        text-decoration: none;
-    }
-</style>
+<!--<style>-->
+    <!--#shichunyu{-->
+        <!--width:calc(100% - 38px);-->
+        <!--width:-webkit-calc(100% - 38px);-->
+        <!--width:-moz-calc(100% - 38px);-->
+        <!--background-color: #f5f5f5;-->
+    <!--}-->
+    <!--#shichunyu .header{-->
+        <!--width: 100%;-->
+        <!--background-color: #fff;-->
+        <!--padding: 20px 0;-->
+    <!--}-->
+    <!--#shichunyu .header .container .row .col-md-3 img{-->
+        <!--width: 200px;-->
+        <!--height: 52px;-->
+    <!--}-->
+    <!--#shichunyu .header .container .row .col-md-9 span{-->
+        <!--display: inline-block;-->
+        <!--font-size: 12px;-->
+        <!--width: 861px;-->
+        <!--height: 28px;-->
+        <!--background-color: #ffefef;-->
+        <!--border:1px solid #ffc0cc;-->
+        <!--top:12px;-->
+        <!--text-align: center;-->
+        <!--line-height: 28px;-->
+        <!--margin-top: 12px;-->
+    <!--}-->
+    <!--#shichunyu .content{-->
+        <!--width: 100%;-->
+        <!--position: relative;-->
+        <!--overflow: hidden;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .content_vacuity{-->
+        <!--width: 100%;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .content_vacuity img{-->
+        <!--margin-left: -400px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab{-->
+        <!--width: 380px;-->
+        <!--background: rgba(255,236,235,0.9);-->
+        <!--position: absolute;-->
+        <!--top: 20%;-->
+        <!--right:10%;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login{-->
+        <!--height: 60px;-->
+        <!--border-bottom:1px solid #cccccc;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login a{-->
+        <!--line-height: 42px;-->
+        <!--text-align: center;-->
+        <!--font-size: 14px;-->
+        <!--font-weight: 700;-->
+        <!--text-decoration: none;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login .login_left{-->
+        <!--float: left;-->
+        <!--width: 50%;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login .login_right{-->
+        <!--float: left;-->
+        <!--width: 50%;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login .login_left .tab_left{-->
+        <!--color: #fe617a;-->
+        <!--height: 45px;-->
+        <!--border-bottom: 2px solid #ff4066;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login .login_right .tab_right{-->
+        <!--color: #fe617a;-->
+        <!--height: 45px;-->
+        <!--border-bottom: 2px solid #ff4066;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login .login_left .lod_left{-->
+        <!--display: block;-->
+        <!--width: 100px;-->
+        <!--margin: 10px auto 0;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .login .login_right .lod_right{-->
+        <!--display: block;-->
+        <!--width: 100px;-->
+        <!--margin: 10px auto 0;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .inputS{-->
+        <!--width: 100%;-->
+        <!--height: 120px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .inputS input{-->
+        <!--width: 300px;-->
+        <!--height: 40px;-->
+        <!--background:none;-->
+        <!--border: 1px solid #ccc;-->
+        <!--margin-top: 15px;-->
+        <!--font-size:12px;-->
+        <!--padding: 0 5px;-->
+        <!--outline: none;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .buttons{-->
+        <!--width: 100%;-->
+        <!--height: 60px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .buttons input{-->
+        <!--width: 300px;-->
+        <!--height: 40px;-->
+        <!--margin-top: 15px;-->
+        <!--border: none;-->
+        <!--background-color: #ff5777;-->
+        <!--color: white;-->
+        <!--font-size: 12px;-->
+        <!--cursor: pointer;-->
+        <!--text-align: center;-->
+        <!--line-height: 40px;-->
+        <!--outline: none;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .other_log{-->
+        <!--margin-top: 20px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .other_log a{-->
+        <!--text-decoration: none;-->
+        <!--color: #333333;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .other_log a:nth-child(1){-->
+        <!--margin-left: -100px;-->
+        <!--padding-right: 40px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .registered{-->
+        <!--padding-top: 15px;-->
+        <!--text-align: right;-->
+        <!--padding-right: 25px;-->
+        <!--padding-bottom: 30px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .registered a{-->
+        <!--font-size:12px;-->
+        <!--text-decoration: underline;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .registered .forget_psd{-->
+        <!--color: #959595;-->
+        <!--padding-right: 15px;-->
+    <!--}-->
+    <!--#shichunyu .content .container .row .tab .registered .free_registration{-->
+        <!--color:#fe5979;-->
+    <!--}-->
+
+<!--</style>-->
 <div id="shichunyu">
     <div class="header">
         <div class="container">
@@ -291,69 +207,5 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="row text-muted text-center">
-                <div class="col-md-8">
-                    <div class="footer_left">
-                        <ul>
-                            <li><h4>买家帮助</h4></li>
-                            <li>新手服务</li>
-                            <li>服务保障</li>
-                            <li>常见问题</li>
-                            <li>风险监测</li>
-                        </ul>
-                        <ul>
-                            <li><h4>商家帮助</h4></li>
-                            <li>供应商招募</li>
-                            <li>商家后台</li>
-                        </ul>
-                        <ul>
-                            <li><h4>关于我们</h4></li>
-                            <li>关于美丽说</li>
-                            <li>联系我们</li>
-                        </ul>
-                        <ul>
-                            <li><h4>关注我们</h4></li>
-                            <li>新浪微博</li>
-                            <li>QQ空间</li>
-                            <li>腾讯微博</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="footer_right">
-                        <div class="wechat_code">
-                            <h4>美丽说微信服务号</h4>
-                            <img src="images/wechat-code.jpg" alt="">
-                        </div>
-                        <div class="meilishuoApp">
-                            <h4>美丽说客户端下载</h4>
-                            <img src="images/MeiLiShuoApp.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <div class="container">
-                <div class="row text-muted text-center">
-                    <div class="col-md-12">
-                        <p>
-                            Copyright &copy;2017 Meilishuo.com&nbsp;
-                            <a href="#">电信与信息服务业务经营许可证100798号</a>&nbsp;
-                            <a href="#">经营性网站备案信息 </a>
-                        </p>
-                        <p>
-                            京ICP备11031139号&nbsp;
-                            京公网安备110108006045&nbsp;
-                            客服电话:4000-800-577&nbsp;
-                            文明办网文明上网举报电话:010-82615762&nbsp;
-                            <a href="#">违法不良信息举报中心</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+<div ng-include="'template/footer.html'"></div>

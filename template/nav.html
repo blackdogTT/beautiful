@@ -1,7 +1,35 @@
 <nav class="nav-right">
-    <a href=""><p>下载App</p></a>
-    <a href="#/home"><p>首页</p></a>
-    <a href="#/sort"><p>分类</p></a>
-    <a href="#/cart"><p>购物车</p></a>
-    <a href="#/logIn"><p>登陆</p></a>
+    <a href="#/logIn">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shouji"></use>
+        </svg>
+        <p>下载App</p>
+    </a>
+    <a href="#/cart">
+        <span class="cart_amount" ng-hide="dispose.cartArr.length===0">{{dispose.cartArr.length}}</span>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-gouwuchekong"></use>
+        </svg>
+        <p>购物车</p>
+    </a>
+    <a href="#/home">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-home"></use>
+        </svg>
+        <p>首页</p>
+    </a>
+    <a href="#/sort">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-leimupinleifenleileibie"></use>
+        </svg>
+        <p>
+            分类
+        </p>
+    </a>
+    <a href="#/logIn">
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-denglu"></use>
+        </svg>
+        <p>登陆</p>
+    </a>
 </nav>
